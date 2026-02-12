@@ -6,10 +6,9 @@
   "homepage": "https://gjrsgksrgege.github.io/valentines-invitation",
   "scripts": {
     "dev": "vite",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
