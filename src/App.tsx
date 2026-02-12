@@ -41,7 +41,6 @@ function App() {
   const [stepIndex, setStepIndex] = useState(0);
   const [Yesbutton, setYesbutton] = useState<number>(1);
   const [pos, setPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [isMoving, setIsMoving] = useState<boolean>(false);
 
   const [Yesclicked, setYesclicked] = useState(steps[0].bg);
   const [Yesclicked2, setYesclicked2] = useState(steps[0].text1);
@@ -66,7 +65,6 @@ function App() {
 
   const handleNoclick = () => {
     setYesbutton(Yesbutton + 0.2);
-    setIsMoving(true);
     setPos({
       x: Math.floor(Math.random() * 90),
       y: Math.floor(Math.random() * 90)
