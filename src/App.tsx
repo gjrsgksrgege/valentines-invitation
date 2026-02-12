@@ -124,32 +124,37 @@ function App() {
         </div>
 
         <div className="relative w-[500px] h-[100px]">
-          {/* YES BUTTON */}
-          <button
-            onClick={handleYesclick}
-            style={{
-              left: `${pos.x}%`,
-              top: `${pos.y}%`,
-              transform: `scale(${Yesbutton})`,
-              transition: "transform 0.5s, left 0.5s, top 0.5s"
-            }}
-            className="absolute w-[227px] bg-[#04A777] text-2xl text-white p-4 rounded focus:outline-none z-10"
-          >
-            {Yesbutton2}
-          </button>
+  {stepIndex < steps.length - 1 && (
+    <>
+      {/* YES BUTTON */}
+      <button
+        onClick={handleYesclick}
+        style={{
+          left: `${pos.x}%`,
+          top: `${pos.y}%`,
+          transform: `scale(${Yesbutton})`,
+          transition: "transform 0.5s, left 0.5s, top 0.5s"
+        }}
+        className="absolute w-[227px] bg-[#04A777] text-2xl text-white p-4 rounded focus:outline-none z-10"
+      >
+        {Yesbutton2}
+      </button>
 
-          {/* NO BUTTON */}
-          <button
-            onClick={handleNoclick}
-            style={{
-              left: `50%`,
-              top: `0%`
-            }}
-            className="absolute w-[227px] bg-[#BA1F33] text-2xl text-white p-4 rounded focus:outline-none"
-          >
-            {Nobutton}
-          </button>
-        </div>
+      {/* NO BUTTON */}
+      <button
+        onClick={handleNoclick}
+        style={{
+          left: `50%`,
+          top: `0%`
+        }}
+        className="absolute w-[227px] bg-[#BA1F33] text-2xl text-white p-4 rounded focus:outline-none"
+      >
+        {Nobutton}
+      </button>
+    </>
+  )}
+</div>
+
       </div>
     </div>
   );
